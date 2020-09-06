@@ -8,55 +8,51 @@ class Mersenne
     }
     int isMersenne()
     {
-        long i,n1,power;n1=num+1;int M=0;
-        for(i=0;;i++)
-        {
-            power=(int)(Math.pow(2,i));
-            if(power==n1)
-            {
-                M=1;
-                break;
-            }
-        }
-        return M;
+       long n=0;
+for(int i=1;i<=20;i++)
+{
+n=(long)(Math.pow(2,i)-1);
+if(n==num){
+return 1;
+}
+}
+return 0;
     }
     int isDoubleMersenne()
     {
-        long i,n1,power,p;n1=num+1;int DM=0,M=0;
-        for(i=0;;i++)
-        {
-            power=(int)(Math.pow(2,i));
-            if(power==n1)
-            {
-                p=i;
-                M=1;break;
-            }
-        }
-        if(M==1)
-        {
-            long n2,p2;
-            n2=p+1;
-            for(i=0;;i++)
-            {
-                p2=(int)(Math.pow(2,i));
-                if(p2==n2)
-                {
-                    DM=1;
-                    break;
-                }
-            }
-        }
-        return DM;
-    }
-void genMersenne()
+        long n=0;long pwr=0;
+for(int i=1;i<=20;i++)
 {
-long Mer=(int)((Math.pow(2,num))-1);
-System.out.println("A  Mersenne No. = "+Mer);
+pwr=(long)Math.pow(2,i)-1;
+n=(long)(Math.pow(2,pwr)-1);
+if(n==num)
+{
+    return 1;
 }
-void genDoubleMersenne()
+}
+return 0;
+    }
+public void genMersenne(){
+    long num=0;
+    System.out.println("Generated Mersenne numbers are :");
+    for(int i=1;i<=10;i++)
+    {
+        num=(long)(Math.pow(2,i)-1);
+        System.out.print(num+" ");
+    }
+    System.out.println();
+}
+public void genDoubleMersenne()
 {
-long DMer=(int)((Math.pow(2,((Math.pow(2,num))-1)))-1);
-System.out.println("A Double Mersenne No. = "+DMer);
+    long num=0;long pwr=0;
+    System.out.println("Generated double Mersenne Numbers are:");
+    for(int i=1;i<=6;i++)
+    {
+     pwr=(long)Math.pow(2,i)-1;
+     num=(long)(Math.pow(2,pwr)-1);
+     System.out.print(num+" ");
+    }
+    System.out.println();
 }
     public static void main(String ars[])
     {
@@ -65,13 +61,13 @@ System.out.println("A Double Mersenne No. = "+DMer);
         Scanner in=new Scanner(System.in);
         N=in.nextInt();
         Mersenne ob=new Mersenne(N);
-        int M=ob.isMersenne();
-        if (M==1)
+       
+        if (ob.isMersenne()==1)
             System.out.println(N+" is a Mersenne");
         else
             System.out.println(N+" is not a Mersenne");
-        int DM=ob.isDoubleMersenne();
-        if (DM==1)
+        
+        if (ob.isDoubleMersenne()==1)
             System.out.println(N+" is a Double Mersenne");
         else
             System.out.println(N+" is not a Double Mersenne");
