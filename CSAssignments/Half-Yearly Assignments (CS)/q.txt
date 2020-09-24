@@ -1,0 +1,18 @@
+1.state any two difference between recursion and iteration
+2.Write a method to calculate the sum of the squares of the digits  using recursion.
+class square
+{
+int num_sq(int n)
+{
+int n1=n;
+int s,d;
+d=n1%10;
+s=s+(int)Math.pow(d,2);
+if(n1==0)
+return s;
+else
+num_sq(n1/10);
+}
+}
+3. Difference b/w text and binary file.
+4. A square matrix find the greatest of each row
