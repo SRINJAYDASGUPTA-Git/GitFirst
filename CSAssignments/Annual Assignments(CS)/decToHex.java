@@ -17,12 +17,13 @@ return hex;
 }
 public static void main(String ars[])
 {
+decToHex ob=new decToHex();
 Scanner in=new Scanner(System.in);
 int dec;
 String hex;
 System.out.println("Enter the decimal");
 dec=in.nextInt();
 hex=ob.converter(dec);
-System.out.println("Hexadecimal="+oct);
+System.out.println("Hexadecimal="+hex);
 }
 }

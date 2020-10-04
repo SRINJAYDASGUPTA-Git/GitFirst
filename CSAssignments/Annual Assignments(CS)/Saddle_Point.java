@@ -13,7 +13,13 @@ System.out.println("Enter the matrix elements");
 for(i=0;i<n;i++)
 for(j=0;j<n;j++)
 arr[i][j]=in.nextInt();
-
+System.out.println("The Matrix entered");
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+System.out.print(arr[i][j]+" ");
+System.out.println();
+}
 for(i=0;i<p;i++)
 {
 rowmin=arr[i][0];
@@ -37,6 +43,8 @@ break;
 if(sp==1)
 System.out.println("The Saddle Point is "+rowmin);
 }
+if(sp==0)
+System.out.println("No saddle point");
 }
 public static void main(String ars[])
 {

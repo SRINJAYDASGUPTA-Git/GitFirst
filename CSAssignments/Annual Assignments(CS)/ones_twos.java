@@ -5,6 +5,16 @@ String ones(String bin)
 {
 String one="";int p,i;char c;
 p=bin.length();
+for(i=(p-1);i>=0;i--)
+{
+ c=bin.charAt(i);
+if(Integer.parseInt(String.valueOf(c))>1)
+{
+System.out.println("Invalid Binary No.");
+System.exit(0);
+}
+}
+
         for(i=0;i<p;i++)
         {
             c=bin.charAt(i);
@@ -12,7 +22,7 @@ p=bin.length();
                 one=one+"0";
             else
                 one=one+"1";
-        }
+        }	
 return one;
 }
 String twos(String bin)
