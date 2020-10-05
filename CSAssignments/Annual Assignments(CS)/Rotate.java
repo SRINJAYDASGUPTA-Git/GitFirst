@@ -3,10 +3,10 @@ class Rotate
 {
     public static void rotate(int mat[][]) {
          int len = mat.length;
-        for (int i = 0; i < len; ++i) {
-            for (int j = 0; j < i; ++j) {
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < i; j++) {
                 int n = mat[i][j];
-                mat[i][j] = mat[j][i];
+                mat[i][j] = mat[j][i];	
                 mat[j][i] = n;
             }
         }
@@ -17,8 +17,8 @@ class Rotate
                 mat[len - i - 1][j] = n2;
             }
         }
-        for (int i = 0; i < len; ++i) {
-            for (int j = 0; j < len; ++j) {
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < len; i++) {
                 System.out.print( mat[i][j]+"  ");
             }
             System.out.println();
