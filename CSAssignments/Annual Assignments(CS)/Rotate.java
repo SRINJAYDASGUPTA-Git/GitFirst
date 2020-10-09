@@ -18,7 +18,7 @@ class Rotate
             }
         }
         for (int i = 0; i < len; i++) {
-            for (int j = 0; j < len; i++) {
+            for (int j = 0; j < len; j++) {
                 System.out.print( mat[i][j]+"  ");
             }
             System.out.println();
