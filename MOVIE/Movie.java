@@ -21,7 +21,7 @@ class Movie
             System.out.println("Enter the no. of seats");
             seats_booked=in.nextInt();
             seats=seats-seats_booked;
-            System.out.println("Loading");
+            System.out.print("Loading");
             try
             {
                 for(int i=0;i<5;i++)
@@ -29,6 +29,7 @@ class Movie
                     System.out.print("...");
                     Thread.sleep(1000);
                 }
+                System.out.println();
             }
             catch(Exception e)
             {
