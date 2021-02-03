@@ -40,8 +40,8 @@ m++;
 {
 for(j=0;j<(k-1-i);j++)
 {
-if(sar[j].equals(" . ") || sar[j].equals(" ! ") || sar[j].equals(" ? "))	
-continue;
+//if(sar[j].equals(" . ") || sar[j].equals(" ! ") || sar[j].equals(" ? "))	
+//continue;
 if(sar[j].length()>sar[j+1].length())
 {
 temp=sar[j];
@@ -57,11 +57,11 @@ for(i=0;i<k;i++)
 else
 System.out.println("Invali dinput");
 }
-publicstaticvoidmain(Stringars[])
+public static void main(String ars[])
 {
 String sin;
 Scanner in=new Scanner(System.in);
-System.out.println("Enterasentence");
+System.out.println("Enter a sentence");
 sin=in.nextLine();
 Sentence ob=new Sentence();
 ob.Sent(sin);
